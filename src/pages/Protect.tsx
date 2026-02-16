@@ -57,7 +57,7 @@ const Protect = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-foreground">Anti-copy layer (experimental)</p>
-              <p className="text-xs text-muted-foreground">Prevents screenshots and screen recordings</p>
+              <p className="text-xs text-muted-foreground">Discourages easy copying in supported environments (experimental)</p>
             </div>
             <Switch checked={antiCopy} onCheckedChange={setAntiCopy} />
           </div>

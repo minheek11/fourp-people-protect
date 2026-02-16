@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, ImageIcon, CheckCircle, XCircle } from "lucide-react";
+import { Mail, ImageIcon, CheckCircle, XCircle, Download, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -84,9 +84,15 @@ const Approval = () => {
                 <p className="text-xs text-muted-foreground">
                   A secure download link has been sent to {email}. It expires in 24 hours.
                 </p>
-                <Button variant="outline" size="sm" onClick={handleReset}>
-                  Review Another
-                </Button>
+                <div className="flex gap-3">
+                  <Button size="sm" className="gap-2">
+                    <Download className="h-4 w-4" />
+                    Download
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={handleReset}>
+                    Review Another
+                  </Button>
+                </div>
               </motion.div>
             )}
 
@@ -104,9 +110,15 @@ const Approval = () => {
                 <p className="text-xs text-muted-foreground">
                   {email} has been notified that access was denied.
                 </p>
-                <Button variant="outline" size="sm" onClick={handleReset}>
-                  Review Another
-                </Button>
+                <div className="flex gap-3">
+                  <Button size="sm" disabled className="gap-2 opacity-50">
+                    <Lock className="h-4 w-4" />
+                    Download locked until approval
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={handleReset}>
+                    Review Another
+                  </Button>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
