@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Protect from "./pages/Protect";
 import Firewalls from "./pages/Firewalls";
 import Approval from "./pages/Approval";
+import Verify from "./pages/Verify";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/protect" element={<Protect />} />
             <Route path="/firewalls" element={<Firewalls />} />
             <Route path="/approval" element={<Approval />} />
+            <Route path="/verify" element={<Verify />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
