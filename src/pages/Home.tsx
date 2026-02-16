@@ -36,10 +36,10 @@ const Home = () => {
             size="lg"
             variant="outline"
             className="gap-2 text-base px-8"
-            onClick={() => navigate("/verify")}
+            onClick={() => navigate("/approval")}
           >
             <CheckCircle className="h-5 w-5" />
-            Verify a Copy
+            Approval Queue
           </Button>
         </div>
       </motion.div>
